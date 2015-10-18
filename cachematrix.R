@@ -51,3 +51,9 @@ cacheSolve <- function(x, ...) {
     
     inv_x
 }
+
+## Unit test: inverse returned by cacheSolve() is equal to the cached one.
+## x <- matrix(rnorm(100), 10, 10)
+## struct_x <- makeCacheMatrix(x)
+## inv_x <- cacheSolve(struct_x)
+## identical(inv_x, struct_x$getinv()) # TRUE
